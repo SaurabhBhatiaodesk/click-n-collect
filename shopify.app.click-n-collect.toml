@@ -1,24 +1,24 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "ac9b99f068b4a8d49a05a3d2b3988c76"
+client_id = "89fed7617425775d71ce36bed50699d2"
 name = "click-n-collect"
-handle = "click-n-collect-6"
-application_url = "https://beginning-parcel-squad-set.trycloudflare.com"
+handle = "click-n-collect-5"
+application_url = "https://frankfurt-w-auto-metabolism.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "saurabh-click-collect.myshopify.com"
+dev_store_url = "om-test12.myshopify.com"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "read_content,read_discounts,read_inventory,read_locales,read_locations,read_metaobjects,read_product_listings,read_products,read_script_tags,read_shipping,write_content,write_discounts,write_inventory,write_locales,write_locations,write_metaobjects,write_products,write_script_tags"
 
 [auth]
 redirect_urls = [
-  "https://beginning-parcel-squad-set.trycloudflare.com/auth/callback",
-  "https://beginning-parcel-squad-set.trycloudflare.com/auth/shopify/callback",
-  "https://beginning-parcel-squad-set.trycloudflare.com/api/auth/callback"
+  "https://frankfurt-w-auto-metabolism.trycloudflare.com/auth/callback",
+  "https://frankfurt-w-auto-metabolism.trycloudflare.com/auth/shopify/callback",
+  "https://frankfurt-w-auto-metabolism.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
