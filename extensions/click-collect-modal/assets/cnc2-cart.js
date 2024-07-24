@@ -38,7 +38,7 @@ async function cartUpdate(updates, flag = false) {
 }
 async function fetchAccessToken() {
 	try {
-		let response = await fetch(`https://clickncollect-12d7088d53ee.herokuapp.com/api/get?shop=${location.hostname}`, {
+		let response = await fetch(`https://fourth-basin-develop-dem.trycloudflare.com/api/get?shop=${location.hostname}`, {
 			headers: {
 				"Content-Type": "application/json",
 				Accept: "application/json"
@@ -53,7 +53,7 @@ async function fetchAccessToken() {
 }
 async function fetchQuantity() {
 	try {
-		let response = await fetch(`https://clickncollect-12d7088d53ee.herokuapp.com/api/quantity?shop=${location.hostname}`, {
+		let response = await fetch(`https://fourth-basin-develop-dem.trycloudflare.com/api/quantity?shop=${location.hostname}`, {
 			headers: {
 				"Content-Type": "application/json",
 				Accept: "application/json"
@@ -94,7 +94,7 @@ async function getCartLocations(accessToken, selectedLocationName = "") {
 			if (destinationsArr.length > 0) {
 				let customerLocation = getCookie("customerlocation");
 				document.querySelector(".location").value = customerLocation;
-				let distanceApiUrl = `https://clickncollect-12d7088d53ee.herokuapp.com/api/distance?customerlocation=${customerLocation}&destinations=${destinationsArr.join("|")}&shop=${location.hostname}`;
+				let distanceApiUrl = `https://fourth-basin-develop-dem.trycloudflare.com/api/distance?customerlocation=${customerLocation}&destinations=${destinationsArr.join("|")}&shop=${location.hostname}`;
 				let res = await fetchData(distanceApiUrl);		
 				let locationData = [];	const sortedLocations = []; 
 				for (const location of locations) {
@@ -589,7 +589,7 @@ document.addEventListener("change", function (event) {
 	}
 });
 document.addEventListener("click", function (event) {
-	if (event.target.matches("button.check-btn")) {
+	if (event.target.matches(".check-btn-os button")) {
 		localStorage.setItem("testings", JSON.stringify([]));
 		setCookie("customerlocation", document.querySelector(".location").value);
 		var storeLocationName = getCookie("storelocationName");

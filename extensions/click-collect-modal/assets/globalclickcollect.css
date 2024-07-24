@@ -69,7 +69,7 @@
 }
 
 .address-popup {
-    margin-top: 0.5em;
+    /* margin-top: 0.5em; */
     max-height: 350px;
     overflow: auto;
 }

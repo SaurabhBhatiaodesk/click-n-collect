@@ -1,25 +1,25 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "bdf844db08d6446d338d6085d2ec49d1"
-name = "cnc--demo"
-handle = "cnc-demo-1"
-application_url = "https://jews-games-voices-jobs.trycloudflare.com"
+client_id = "24effb1c40ba75cdb4e37b6533fe6a51"
+name = "CnC-demo"
+handle = "cnc-demo"
+application_url = "https://fourth-basin-develop-dem.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "dbsave.myshopify.com"
+dev_store_url = "saas-click-collect.myshopify.com"
 include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_shipping,read_inventory,read_locales,read_locations,read_product_listings,read_products,read_publications,read_script_tags,write_content,write_inventory,write_locations,write_products,write_publications,write_script_tags"
+scopes = "read_content,read_discounts,read_inventory,read_locales,read_locations,read_metaobjects,read_product_listings,read_products,read_script_tags,read_shipping,write_content,write_discounts,write_inventory,write_locales,write_locations,write_metaobjects,write_products,write_script_tags,write_shipping"
 
 [auth]
 redirect_urls = [
-  "https://jews-games-voices-jobs.trycloudflare.com/auth/callback",
-  "https://jews-games-voices-jobs.trycloudflare.com/auth/shopify/callback",
-  "https://jews-games-voices-jobs.trycloudflare.com/api/auth/callback"
+  "https://fourth-basin-develop-dem.trycloudflare.com/auth/callback",
+  "https://fourth-basin-develop-dem.trycloudflare.com/auth/shopify/callback",
+  "https://fourth-basin-develop-dem.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
