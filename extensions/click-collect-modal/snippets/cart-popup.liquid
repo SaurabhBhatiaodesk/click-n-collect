@@ -4,7 +4,7 @@
       <div class="cart-left">
         <div class="cart-popup-box">
         <a href="#" class="cross">
-          <img class="cross" width="50px" height="25px" src="https://cdn.shopify.com/s/files/1/0596/5450/4518/files/crossed.png?v=1712042181" alt="crossed" />
+          <img class="cross" width="25px" height="25px" src="https://cdn.shopify.com/s/files/1/0596/5450/4518/files/crossed.png?v=1712042181" alt="crossed" />
         </a>
         <p>To Suburb or Postcode</p>
         <div class="check-btn">
@@ -73,7 +73,7 @@
                          </b></span>
                       {%- endif -%}</span>
 
-                      <cart-remove-button
+                      <cart-remove-button class="cart-remove-button"
                         id="Remove-{{ item.index | plus: 1 }}"
                         data-index="{{ item.index | plus: 1 }}"
                       >
@@ -111,7 +111,7 @@
         <p class="note"><span class="redish">Note:</span> Please select the same location for pickup on checkout page as well. </p>
      
          <button type="submit" class="cart-btn gotocheckout checkoutbtn">Checkout With Click & Collect</button>
-         <button type="submit" class="cart-btn gotocheckout checkoutbtn1">Checkout</button>
+         <button type="submit" class="cart-btn gotocheckout checkoutbtn1">Checkout with Delivery only</button>
 
       </div>
     
