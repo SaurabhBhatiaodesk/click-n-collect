@@ -364,6 +364,9 @@ cart-remove-button .button {
   font-weight: 400;
   color: #141414;
 }
+.cart-popup .quantity-row h3 a:hoveR {
+  text-decoration: none;
+}
 .price.price--end {
   font-size: 14px;
   line-height: 20px;
