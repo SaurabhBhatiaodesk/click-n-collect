@@ -17,8 +17,8 @@ export async function loader({ request }) {
   
   console.log('apiKey1111111', apiKey1);    
       
+  // let apikey= 'AIzaSyBXNyT9zcGdvhAUCUEYTm6e_qPw26AOPgI';
   let apikey= 'AIzaSyBXNyT9zcGdvhAUCUEYTm6e_qPw26AOPgI';
-  // let apikey= 'AIzaSyCko7Eg7TvcKwILrpqnwiRlWY9OlF31TpA';
   // let apikey = apiKey1.apikey;
   const requestOptions = {
     method: "GET",
