@@ -1,4 +1,4 @@
-async function fetchAccessToken(){try{const e=await fetch(`https://fourth-basin-develop-dem.trycloudflare.com/api/get?shop=${location.hostname}`,{headers:{"Content-Type":"application/json",Accept:"application/json"}});if(!e.ok)throw new Error("Network response was not ok.");return await e.json()}catch(e){console.error("Error fetching access token:",e);throw e}}
+async function fetchAccessToken(){try{const e=await fetch(`https://clickncollect-12d7088d53ee.herokuapp.com/api/get?shop=${location.hostname}`,{headers:{"Content-Type":"application/json",Accept:"application/json"}});if(!e.ok)throw new Error("Network response was not ok.");return await e.json()}catch(e){console.error("Error fetching access token:",e);throw e}}
 function setCookie(name,value,days){let expires="";if(days){let date=new Date();date.setTime(date.getTime()+(days*86400000));expires="; expires="+date.toUTCString()}document.cookie=`${name}=${value}${expires}; path=/`;}
 function getCookie(name){let cookies=document.cookie.split(";").map(cookie=>cookie.trim().split("="));for(let i=0;i<cookies.length;i++){if(cookies[i][0]===name){return decodeURIComponent(cookies[i][1]);}}return null;}
 function toggleDropdown() { document.getElementById("myDropdown").classList.toggle("show");  }
@@ -28,7 +28,7 @@ async function getLocationsDropdown(accessToken, selectedLocation = "") {
     
       if (destinationsArr.length > 0 && selectedLocation != null) {
         const customerLocation = getCookie("customerlocation");
-        const mapUrl = `https://fourth-basin-develop-dem.trycloudflare.com/api/distance?customerlocation=${customerLocation}&destinations=${destinationsArr.join("|")}&shop=${location.hostname}`;
+        const mapUrl = `https://clickncollect-12d7088d53ee.herokuapp.com/api/distance?customerlocation=${customerLocation}&destinations=${destinationsArr.join("|")}&shop=${location.hostname}`;
         const res = await fetchData(mapUrl);
         var count = 0;
         if (res) {
