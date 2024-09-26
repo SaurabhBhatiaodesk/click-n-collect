@@ -121,7 +121,7 @@
 
 
   <script>
-  console.log("Code updated os ::::::")
+ // console.log("Code updated os ::::::")
   </script>
 {% endcomment %}
 
@@ -144,9 +144,9 @@
         <div class="col-heading-os">
           <p>To Suburb or Postcode</p>
         </div>
-        <div class="check-btn-os">
+        <div class="check-btn-os check-btn">
           <input class="location" type="text" placeholder="SYDNEY NSW 2000">
-          <button type="button">Check</button>
+          <button type="button" class="check-btn">Check</button>
         </div>
 
         <div class="address-popup">
@@ -162,22 +162,23 @@
         </div>
 
         {% comment %} OLD code for radio btn {% endcomment %}
-        {% comment %} <div class="address-popup11" style="display:none">
+         {% comment %} <div class="address-popup11" style="display:none">
           <div class="radio-cart locationss">
             <div class="radio-btn">
               <input type="radio" id="broadway" name="brand" value="Broadway" checked>
               <label for="Broadway"><b>Broadway</b></label>
             </div>
           </div>
-        </div> {% endcomment %}
+        </div>  {% endcomment %}
 
         {% comment %}  {% endcomment %}
         <!-- Correct Design Section -->
-        <div class="address-radio-block-os">
-          <div class="address-row-os ">
-            <div class="col-os">
+        <div class="address-popup11 address-radio-block-os loader">
+          <div class="address-row-os radio-cart locationss">
+          
+          <div class="col-os radio-btn " style="display:none;">
               <input type="radio" id="broadway" name="location" value="broadway" checked>
-              <label for="broadway">
+              <label for="broadway" class="loader">
                 <span class="radio-text-os">
                   <span class="radio-title-os">Broadway</span>
                   <span class="radio-distance-os">2KM</span>
@@ -185,26 +186,7 @@
               </label>
             </div>
 
-            <div class="col-os">
-              <input type="radio" id="bondi-eastgate" name="location" value="bondi-eastgate">
-              <label for="bondi-eastgate">
-                <span class="radio-text-os">
-                  <span class="radio-title-os">Bondi Eastgate</span>
-                  <span class="radio-distance-os">2KM</span>
-                </span>
-              </label>
             </div>
-
-            <div class="col-os">
-              <input type="radio" id="Westfield Bondi" name="location" value="bondi-eastgate">
-              <label for="Westfield Bondi">
-                <span class="radio-text-os">
-                  <span class="radio-title-os">Westfield Bondi</span>
-                  <span class="radio-distance-os">2KM</span>
-                </span>
-              </label>
-            </div>
-          </div>
         </div>
         {% comment %}  {% endcomment %}
 
@@ -234,14 +216,32 @@
                 <h3>
                   <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
                 </h3>
-                <!-- <quantity-input class="quantity"> -->
-                <div class="item-quantities">
+                <div class="item-quantities" style="display: flex; gap:5px; align-items:center;margin-top: 10px;">
+                  <div class="hidden" style="display: none;"> 
                   <label> Quantity: </label>
                   <span
                     ><b>{{ item.quantity }}</b></span
                   >
+                  </div>
+                  <div class="quantity">
+                    <button class="minus" aria-label="Decrease">&minus;</button>
+                    <input type="number" class="input-box" value="1" min="1" max="100000000000">
+                    <button class="plus" aria-label="Increase">&plus;</button>
+                  </div>
+                  <cart-remove-button
+                  class="cart-remove-button"
+                  id="Remove-{{ item.index | plus: 1 }}"
+                  data-index="{{ item.index | plus: 1 }}"
+                >
+                  <a
+                    href="{{ item.url_to_remove }}"
+                    class="button button--tertiary"
+                  >
+                    {% render 'icon-remove' %}
+                  </a>
+                </cart-remove-button>
                 </div>
-                <!-- </quantity-input> -->
+           
               </div>
             </div>
             <span>
@@ -269,28 +269,17 @@
               {%- endif -%}
             </span>
 
-            <cart-remove-button
-              class="cart-remove-button"
-              id="Remove-{{ item.index | plus: 1 }}"
-              data-index="{{ item.index | plus: 1 }}"
-            >
-              <a
-                href="{{ item.url_to_remove }}"
-                class="button button--tertiary"
-              >
-                {% render 'icon-remove' %}
-              </a>
-            </cart-remove-button>
+         
 
             <p class="error-massage" style="display:none;">
-              <span class="redish">Not avaialable on click & collect at</span>
+              <span class="redish">Not available on click & collect at</span>
               <span class="locationsname">Broadway</span>
             </p>
           </div>
         {% endfor %}
       </div>
       <div class="remove-allitem">
-        <p>Remove all unavailable items</p>
+        <span>Remove all unavailable items</span>
         <cart-remove-button>
           <a
             href=""
@@ -319,6 +308,3 @@
   </div>
 </div>
 
-<script>
-  console.log('Code updated os !');
-</script>
