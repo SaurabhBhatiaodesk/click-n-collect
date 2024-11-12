@@ -618,6 +618,9 @@ document.addEventListener("click", function (event) {
 	}
 	if (event.target.matches(".gotocheckout")) {
 		if (event.target.classList.contains("checkoutbtn")) {
+			
+			const selectedLocation = getCookie("storelocationName"); const customerLocation = getCookie("customerlocation");
+			console.log(customerLocation, ' --  selectedLocation -- ',selectedLocation);
 			event.preventDefault();
 			fetch("/cart/update.js", {
 				method: "POST",
@@ -626,6 +629,8 @@ document.addEventListener("click", function (event) {
 				},
 				body: JSON.stringify({
 					attributes: {
+						'customerLocationName' : selectedLocation,
+						"customerLocationPinCode" : customerLocation,
 						"_order tag": true
 					}
 				})

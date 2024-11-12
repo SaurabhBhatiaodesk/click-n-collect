@@ -3,7 +3,7 @@
 client_id = "c2aef3cf60c016454d3da1bc06566b9e"
 name = "clickncollect"
 handle = "clickncollect-1"
-application_url = "https://az-showers-about-nevertheless.trycloudflare.com"
+application_url = "https://workflow-walks-cos-pioneer.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -12,9 +12,9 @@ scopes = "read_customers,read_inventory,read_locales,read_locations,read_orders,
 
 [auth]
 redirect_urls = [
-  "https://az-showers-about-nevertheless.trycloudflare.com/auth/callback",
-  "https://az-showers-about-nevertheless.trycloudflare.com/auth/shopify/callback",
-  "https://az-showers-about-nevertheless.trycloudflare.com/api/auth/callback"
+  "https://workflow-walks-cos-pioneer.trycloudflare.com/auth/callback",
+  "https://workflow-walks-cos-pioneer.trycloudflare.com/auth/shopify/callback",
+  "https://workflow-walks-cos-pioneer.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -16,6 +16,9 @@ export default /**
   // Check if the cart has an attribute with the key "locationSend" and get its value
   const locationAttribute = input.cart.locationShow && input.cart.locationShow.value;
 
+  console.log(JSON.stringify(locationAttribute), null, 2, "xxxxxxxxxxxxxxxxxx");
+
+
   // Array to store operations
   let operations = [];
 
@@ -43,7 +46,7 @@ export default /**
   }
 
   // Log the operations for debugging
-  console.log(operations, "operations");
+  console.log(JSON.stringify(operations), null , 2 , "checked operations data");
 
   // Return the operations (empty if no matches found)
   return { operations };

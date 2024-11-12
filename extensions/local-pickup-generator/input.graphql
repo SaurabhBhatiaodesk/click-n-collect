@@ -1,7 +1,7 @@
 query Input {
   cart {
      # Cart line attribute to get the fabric length provided by the customer
-      locationShow: attribute(key: "locationSend") {
+      locationShow: attribute(key: "customerLocationName") {
         value
       }
     lines {
