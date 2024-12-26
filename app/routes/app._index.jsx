@@ -817,7 +817,6 @@ console.log("selectedItemNameselectedItemName",selectedItemName)
           console.log("PluginIDPluginID", PluginID)
           config?.fields?.map((cf) => {
             if (cf.required) {
-
               const value = []
               value.push({ "plugin": PluginID, "name": cf.name })
               console.log("valueeeeeeeeee", value);
@@ -1437,11 +1436,11 @@ const isValidUrl = (url) => {
                     </Card>
                   </LegacyCard>
                )}
-
-                 {prefEnableDisable != 0 && configLoader=="configyes" ?(<LegacyCard title="Config" sectioned >
+                {console.log("preCheckedED=>",preCheckedED)}
+                 {preCheckedED!=0 && prefEnableDisable != 0 && configLoader=="configyes" ?(<LegacyCard title="Config" sectioned >
                   <Card title="configform"><div style={{textAlign:"center"}}><Spinner accessibilityLabel="Spinner example" size="large" /></div></Card></LegacyCard>):(
                   <>
-                  {prefEnableDisable != 0 &&
+                  {preCheckedED!=0 && prefEnableDisable != 0 &&
                     configform?.config_form
                     ?.filter(mango => mango?.fields.length > 0)
                     .map((mango, index, filteredArray) => {
@@ -1479,6 +1478,8 @@ const isValidUrl = (url) => {
                                                   error={showerror}
                                                   setHideshow={setHideshow}
                                                   helpText={field.description}
+                                                  required={required}
+                                                  setRequired={setRequired}
                                                 />
                                               );
                                             case "select":
@@ -1493,6 +1494,8 @@ const isValidUrl = (url) => {
                                                     error={showerror}
                                                     setHideshow={setHideshow}
                                                     helpText={field.description}
+                                                    required={required}
+                                                    setRequired={setRequired}
                                                   />
                                                 </>
                                               );
@@ -1507,6 +1510,8 @@ const isValidUrl = (url) => {
                                                   error={showerror}
                                                   setHideshow={setHideshow}
                                                   helpText={field.description}
+                                                  required={required}
+                                                  setRequired={setRequired}
                                                 />
                                               );
                                             default:
@@ -1525,7 +1530,7 @@ const isValidUrl = (url) => {
                     })}
                     </>
                   )}
-                  {prefEnableDisable != 0 && (
+                  {preCheckedED!=0 && prefEnableDisable != 0 && (
                     <>
                   {mapLoader=="mapyes"?(<LegacyCard title="Mapping" sectioned >
                     <Card title="configform"><div style={{textAlign:"center"}}><Spinner accessibilityLabel="Spinner example" size="large" /></div></Card></LegacyCard>):(
