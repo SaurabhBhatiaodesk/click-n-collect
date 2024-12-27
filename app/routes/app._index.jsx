@@ -1263,7 +1263,7 @@ const isValidUrl = (url) => {
 
           <Layout>
 
-               {/* {credentialFormStatus && ( */}
+               {credentialFormStatus && (
                 <div style={{ width: "100%" }}>
                 <LegacyCard
               title={selectedItemName ? ` ${selectedItemName}` : "Stores"} // Dynamic title
@@ -1284,7 +1284,7 @@ const isValidUrl = (url) => {
                   </ButtonGroup>
                 </LegacyCard>
                 </div>
-              {/* )} */}
+              )}
 
             {notificationMessage !== "" && (
             <NotificationBar title={notificationMessage} style={successStyle} />

@@ -1,14 +1,14 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "b92f2e56019fd833383665d00da107d2"
-application_url = "https://strengthening-min-week-larger.trycloudflare.com"
+client_id = "16a66a5dc84be99f4814a92ca16805d6"
+application_url = "https://out-reached-skin-throat.trycloudflare.com"
 embedded = true
 name = "vcc"
-handle = "vcc-1"
+handle = "vcc-4"
 
 [build]
 include_config_on_deploy = true
-dev_store_url = "0360-testing.myshopify.com"
+dev_store_url = "saas-click-collect.myshopify.com"
 automatically_update_urls_on_dev = true
 
 [webhooks]
@@ -20,9 +20,9 @@ scopes = "write_shipping,read_inventory,read_locales,read_locations,read_product
 
 [auth]
 redirect_urls = [
-  "https://strengthening-min-week-larger.trycloudflare.com/auth/callback",
-  "https://strengthening-min-week-larger.trycloudflare.com/auth/shopify/callback",
-  "https://strengthening-min-week-larger.trycloudflare.com/api/auth/callback"
+  "https://out-reached-skin-throat.trycloudflare.com/auth/callback",
+  "https://out-reached-skin-throat.trycloudflare.com/auth/shopify/callback",
+  "https://out-reached-skin-throat.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
